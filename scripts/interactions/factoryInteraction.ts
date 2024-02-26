@@ -9,20 +9,18 @@ async function createStakingContract() {
   const accounts = await ethers.getSigners();
   const signer = accounts[0];
 
-  console.log("Creating a new StakingContract...");
+  console.log("Creating a new StakingContract Instance...");
 
   // Create a new StakingContract via the StakingFactory
-  const stakeTokenAddress = "0xdB08fd7bae554d99aF487d29d6A82d60ae57480A"; // Address of my deployed Stake token
+  const stakeTokenAddress = "0xEbbA496ba76378a8c30090C50895017F6f0eaA45"; // Address of my deployed Stake token
   const createTx = await StakingFactory.connect(signer).createStakingContract(stakeTokenAddress);
 }
 
-// MUMBAI SCAN LINKS
-// https://mumbai.polygonscan.com/address/0x4Ea755a18A2a163E04Fe94c497e5BCce9f70E10D
-// https://mumbai.polygonscan.com/address/0xdb08fd7bae554d99af487d29d6a82d60ae57480a
+// Factory Contract
+// https://mumbai.polygonscan.com/address/0x4ea755a18a2a163e04fe94c497e5bcce9f70e10d
 
-
-// Staking Contract
-// https://mumbai.polygonscan.com/address/0xd56ecc2b269acc8e2a989cd71cd4c0e474e92680
+// New Staking Contract
+// https://mumbai.polygonscan.com/address/0xe6df23c9d77b6940cf1103ea4d83f27b6c6be4a5
 
 
 createStakingContract()
